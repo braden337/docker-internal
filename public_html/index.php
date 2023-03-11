@@ -1,7 +1,5 @@
 <?php
 
-// docker.for.mac.host.internal
-
-$greeting = file_get_contents('http://docker.host.internal:3000/hello');
+$greeting = file_get_contents('http://host.docker.internal:5678/hello');
 
 echo $greeting;

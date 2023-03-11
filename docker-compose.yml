@@ -4,11 +4,13 @@ services:
   apache:
     image: php:apache
     ports:
-      - "8080:80"
+      - "1234:80"
+    extra_hosts:
+      - host.docker.internal:host-gateway
     volumes:
       - ./public_html:/var/www/html
     restart: always
-  
+
   mysql:
     image: mysql:latest
     environment:
