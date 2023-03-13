@@ -1,21 +1,23 @@
-version: "3"
+version: '3'
 
 services:
-  apache:
+  web:
+    container_name: web
     image: php:apache
     ports:
-      - "1234:80"
+      - '1234:80'
     extra_hosts:
       - host.docker.internal:host-gateway
+    env_file:
+      - .env
     volumes:
       - ./public_html:/var/www/html
     restart: always
 
-  mysql:
-    image: mysql:latest
+  db:
+    container_name: db
+    image: mysql
     environment:
-      MYSQL_ROOT_PASSWORD: example_password
-      MYSQL_DATABASE: example_db
-      MYSQL_USER: example_user
-      MYSQL_PASSWORD: example_password
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: data
     restart: always

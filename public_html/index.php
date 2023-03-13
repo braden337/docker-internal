@@ -1,5 +1,10 @@
 <?php
 
-$greeting = file_get_contents('http://host.docker.internal:5678/hello');
+$url = getenv('GREETING_API_URL');
 
-echo $greeting;
+if ($url !== false) {
+    $greeting = file_get_contents($url);
+    echo $greeting;
+} else {
+    echo 'unable to load greeting';
+}

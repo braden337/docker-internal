@@ -2,10 +2,12 @@ lockfileVersion: 5.4
 
 specifiers:
   express: ^4.18.2
+  lodash: ^4.17.21
   nodemon: ^2.0.21
 
 dependencies:
   express: 4.18.2
+  lodash: 4.17.21
   nodemon: 2.0.21
 
 packages:
@@ -348,6 +350,10 @@ packages:
   /is-number/7.0.0:
     resolution: {integrity: sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==}
     engines: {node: '>=0.12.0'}
+    dev: false
+
+  /lodash/4.17.21:
+    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
     dev: false
 
   /media-typer/0.3.0:

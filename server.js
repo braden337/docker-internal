@@ -1,10 +1,21 @@
-const express = require("express");
+const express = require('express');
+const _ = require('lodash');
+
 const app = express();
 
-app.get("/hello", (req, res) => {
-  res.send("Hello apple world");
+const greetings = [
+  'hello',
+  'hi',
+  'good morning',
+  'good evening',
+  'good afternoon',
+  'good night',
+];
+
+app.get('/greeting', (req, res) => {
+  res.send(_.sample(greetings));
 });
 
 app.listen(5678, () => {
-  console.log("Server listening on port 5678!");
+  console.log('Server listening on port 5678');
 });
