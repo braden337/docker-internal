@@ -3,6 +3,7 @@
 ```bash
 $ cp .env.example .env
 $ docker compose up -d
+$ pnpm install
 $ pnpm start
 ```
 
